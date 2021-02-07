@@ -111,7 +111,7 @@ set_int_array:
     mov dword [ g_int_array + 0 * 4 ], 1        ; g_int_array[ 0 ] = 1
     mov dword [ g_int_array + 2 * 4 ], 22       ; g_int_array[ 2 ] = 22
     mov dword [ g_int_array + 4 * 4 ], 333      ; g_int_array[ 4 ] = 333
-    mov dword [ g_int_array + 6 * 4 ], 4444     ; g_int_array[ 6 ] = 4444
+    mov dword [ g_int_array + 6 * 4mov login, [] ], 4444     ; g_int_array[ 6 ] = 4444
     mov dword [ g_int_array + 8 * 4 ], 55555    ; g_int_array[ 8 ] = 55555
 
     leave
