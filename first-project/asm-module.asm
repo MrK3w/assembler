@@ -43,17 +43,18 @@ nastav_pole_cislo32_index_32:
 	enter 0,0
 	;mov ecx, [g_hodnota]
 	mov eax, [g_cislo32]
-	movsx rcx, dword[g_index]
-	;mov edx, [g_index]
-	mov [g_pole_cislo32 + rcx *4], eax
+	;movsx rcx, dword[g_index]
+	mov edx, [g_index]
+	mov [g_pole_cislo32 + edx *4], eax
 	leave
 	ret
 nastav_pole_cislo_32_index:
 	enter 0,0
 	; g_pole_cislo32_index[g_index] = 3333
 	;32 bit to 64 so we must use movsx
-	movsx rax, dword[g_index]
-	mov dword[g_pole_cislo32 + rax * 4], 3333
+
+	mov eax, [g_index]
+	mov dword[g_pole_cislo32 + eax * 4], 3333
 	leave
 	ret
 

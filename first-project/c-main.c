@@ -9,9 +9,9 @@
 
 #include <stdio.h>
 char g_znak;
-int g_cislo32;
+int g_cislo32 = 5;
 long g_cislo64;
-int g_index = 2;
+int g_index = 4;
 int g_hodnota = 125;
 
 char g_pole_znaky[128] = "Pozdrav z prednasky!";
@@ -30,6 +30,7 @@ void presun_pole_znaky_cislo32();
 
 void print_pole_cislo32()
 {
+  printf("pole_cislo_32: ");
   for (int i = 0; i < 10; i++)
   {
     printf("%d ",g_pole_cislo32[i]);
@@ -38,6 +39,7 @@ void print_pole_cislo32()
 
 void print_pole_cislo64()
 {
+  printf("pole cislo 64:");
   for (int i = 0; i < 10; i++)
   {
     printf("%ld ",g_pole_cislo64[i]);
@@ -47,19 +49,18 @@ void print_pole_cislo64()
 
 int main()
 {
-  //main
-  printf("g_znak %c g_cislo32 %d g_cislo64 %ld\n",g_znak,g_cislo32,g_cislo64);
-  nastav_promenne();
-  printf("g_znak %c g_cislo32 %d g_cislo64 %ld\n",g_znak,g_cislo32,g_cislo64);
-  presun_promenne();
-  printf("g_znak %c g_cislo32 %d g_cislo64 %ld\n",g_znak,g_cislo32,g_cislo64);
-  printf("g_pole_znaky '%s'",g_pole_znaky);
-  nastav_pole_znaku();
-  printf("g_pole_znaky '%s'\n",g_pole_znaky);
-  nastav_pole_cislo64();
-  print_pole_cislo64();
+
+  //nastav_promenne();
+  //printf("g_znak %c g_cislo32 %d g_cislo64 %ld\n",g_znak,g_cislo32,g_cislo64);
+  //presun_promenne();
+  //printf("g_znak %c g_cislo32 %d g_cislo64 %ld\n",g_znak,g_cislo32,g_cislo64);
+  //printf("g_pole_znaky '%s'",g_pole_znaky);
+  //nastav_pole_znaku();
+  //printf("g_pole_znaky '%s'\n",g_pole_znaky);
+  //nastav_pole_cislo64();
+  //print_pole_cislo64();
   nastav_pole_cislo_32_index();
   print_pole_cislo32();
   nastav_pole_cislo32_index_32();
-  printf("\n\n%d",g_pole_cislo32[g_index]);
+  printf("\n\n%d\n",g_pole_cislo32[g_index]);
   }
