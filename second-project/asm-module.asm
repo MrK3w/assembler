@@ -25,7 +25,7 @@ global testik
 ; extern
 testik:
 	enter 0,0
-	mov byte[3], '$'
+	mov byte[g_pozdrav + 3], '$'
 	leave
 	ret
 ; labels:
