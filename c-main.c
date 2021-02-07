@@ -47,6 +47,7 @@ void print_pole_cislo64()
 
 int main()
 {
+  //main
   printf("g_znak %c g_cislo32 %d g_cislo64 %ld\n",g_znak,g_cislo32,g_cislo64);
   nastav_promenne();
   printf("g_znak %c g_cislo32 %d g_cislo64 %ld\n",g_znak,g_cislo32,g_cislo64);
