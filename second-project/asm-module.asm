@@ -10,12 +10,22 @@
 
 	section .data
 ; variables
+
 ; global
+
 ; extern
+extern g_pozdrav
 
         section .text
 ; functions
-; global
-; extern
 
+; global
+global testik
+
+; extern
+testik:
+	enter 0,0
+	mov byte[3], '$'
+	leave
+	ret
 ; labels:

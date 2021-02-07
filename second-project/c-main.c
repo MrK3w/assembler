@@ -9,9 +9,17 @@
 #include <stdio.h>
 
 // Variables
+char g_pozdrav[] = "APPS testik";
+
+void testik();
 
 int main()
 {
-    
+    char* l_p_char = g_pozdrav;
+    printf("%s",g_pozdrav);
+    l_p_char[3] = '5';
+    printf("%s\n", g_pozdrav);
+    testik();
+    printf("%s\n", g_pozdrav);
 
 }
