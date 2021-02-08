@@ -40,13 +40,17 @@ void print_matrix()
     puts("");
 }
 int main()
-{
+{    
+    
+    
+
+
     swap_endian();
-    build_login();
+       build_login();
     apps_max_matrix();
     print_matrix();
     printf("%s\n",login);
-    //printf("%04X\n",login_num);
+    printf("%04X\n",login_num);
     convert8_to_64();
     printf("%ld",cheaters_remaining_points);
 }

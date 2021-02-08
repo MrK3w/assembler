@@ -23,10 +23,10 @@ global swap_endian, build_login, prohod, apps_max_matrix, convert8_to_64
 ; labels:
 swap_endian:
 	enter 0,0
-	mov ax, [login_num]
-	mov bx, [login_num+1]
-	mov [login_num], bx
-	mov [login_num+1], ax
+	mov ah, [login_num]
+	mov al, [login_num+1]
+	mov [login_num], ah
+	mov [login_num+1], al
 	leave
 	ret
 
@@ -51,7 +51,10 @@ build_login:
 
 	enter 0,0
 
-	
+	mov al, [letters + 0]
+
+	mov [login+0], al
+
 	mov al, [letters + 1]
 
 	mov [login+1], al
@@ -81,6 +84,7 @@ build_login:
 	leave
 
 	ret
+
 
 apps_max_matrix:
 	enter 0,0
