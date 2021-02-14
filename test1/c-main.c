@@ -41,10 +41,6 @@ void print_matrix()
 }
 int main()
 {    
-    
-    
-
-
     swap_endian();
        build_login();
     apps_max_matrix();
