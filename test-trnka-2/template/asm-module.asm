@@ -8,17 +8,9 @@ global speechspeed, combine_items, belt_move, combine, box_take_items, assembler
 speechspeed:
     ;012345678
     enter 0, 0
-    mov al, [sentence + 7]
-    mov cl, [sentence + 8]
-    mov [sentence + 9], al
-    mov [sentence + 10], cl
-    mov al, [sentence + 5]
-    mov cl, [sentence + 6]
-    mov [sentence + 7], al
-    mov [sentence + 8], cl
-    mov byte[sentence + 4], 'e'
-    mov byte[sentence + 5], 'j'
-    mov byte[sentence + 6], ' '
+    mov eax, [sentence + 5]
+    mov [sentence + 7], eax
+    mov dword[sentence + 4], "ej u"
     mov byte[sentence +11], 0h
     leave
     ret
@@ -64,10 +56,10 @@ box_take_items:
         enter 0,0
 
         mov al, [itemsIndexes]
-        movsx eax, al
+        movzx eax, al
         mov qword[chest + 8 * eax], 0
         mov al, [itemsIndexes+1]
-        movsx eax, al
+        movzx eax, al
         mov qword[chest + 8 * eax], 0
         leave
         ret
