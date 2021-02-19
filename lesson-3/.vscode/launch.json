@@ -8,26 +8,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "enter program name, for example ${workspaceFolder}/a.out",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "console": "externalTerminal",
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ]
-        },
-        {
-            "name": "(gdb) Launch",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "enter program name, for example ${workspaceFolder}/a.out",
+            "program": "enter program name, for example ${workspaceFolder}/c-main",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
